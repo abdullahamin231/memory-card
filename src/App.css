@@ -1,0 +1,181 @@
+.app{
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Pixelify Sans';
+  gap: 2rem;
+  padding-bottom: 1rem;
+}
+
+p{
+  margin: 0;
+}
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+
+.loading img {
+  width: 100px;
+  height: 100px;
+  animation: rotate .5s infinite linear; /* Use linear timing function for consistent rotation */
+}
+
+.loading h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #272525;
+  border-radius: .5rem;
+  padding: .5rem;
+  background-color: rgba(255, 255, 255, 0.486);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); /* Start rotation from 0 degrees around X-axis */
+  }
+  100% {
+    transform: rotate(360deg); /* Rotate 360 degrees around X-axis */
+  }
+}
+.title{
+  display: flex; flex-direction: row; align-items: center;
+  color: rgb(240, 240, 240);
+  font-size: 2.5rem;
+  font-weight: bold;
+
+  span{
+    color: #FF0000;
+  }
+  
+}
+
+.scores, .outof{
+  color: #292727;
+  font-weight: 600;
+  display: flex; flex-direction: row; align-items: center; gap: 1rem; justify-content: center;
+  font-size: 1.5rem;
+}
+
+.cards{
+  display: flex; flex-direction: row; align-items: center; flex-wrap: wrap; justify-content: center;
+  width: fit-content;
+  gap: 1rem;
+  p{
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+.card:hover {
+  transition-duration: 150ms;
+  box-shadow: 0 5px 20px 5px #00000044;
+}
+
+.card .glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  
+  background-image: radial-gradient(circle at 50% -20%, #bbbbbb13, #0000000f);
+}
+.card:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.card{
+  display: flex; flex-direction: column; align-items: center; gap: 1rem;
+  background-color: #00000076;
+  padding: 1.5rem 2rem;
+  border-radius: .25rem;
+
+  position: relative;
+  
+  transition: all 250ms ease-in-out;
+}
+
+
+.gameover{
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: #ffffff19;
+  border: 1px solid #292929;
+  padding: 2rem 3rem;
+}
+.gameover p{
+  font-size: 1.5rem;
+  color: #292727;
+  font-weight: bold;
+}
+.gameover button{
+  border: none;
+  font-family: 'Pixelify Sans';
+  font-size: 2.5rem;
+  padding: .25rem .5rem;
+  color: white;
+  background-color: #292727;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  transition: all 200ms ease-in-out;
+}
+.gameover button:hover{
+  cursor: pointer;
+  background-color: white;
+  color: #292727;
+  border: 1px solid #292727;
+}
+
+.start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: #ffffff21;
+  border: 1px solid transparent;
+  padding: 2rem 3rem;
+  font-family: 'Pixelify Sans'; /* Apply pixel font */
+}
+
+.diff,
+.options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.start button {
+  border: none;
+  font-size: 2.5rem;
+  padding: 0.25rem 0.5rem;
+  color: white;
+  background-color: #292727;
+  border: 1px solid transparent;
+  transition: all 200ms ease-in-out;
+  /* Apply pixel font */
+  font-family: 'Pixelify Sans';
+  /* Apply pixelated appearance */
+  text-rendering: optimizeSpeed; /* Optimize rendering for pixelated appearance */
+  image-rendering: pixelated; /* Render images in a pixelated style */
+  -ms-interpolation-mode: nearest-neighbor; /* IE fix for pixelation */
+}
+
+.start button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #292727;
+  border: 1px solid #292727;
+}
